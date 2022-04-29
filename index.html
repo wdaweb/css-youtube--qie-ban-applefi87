@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./css/all.min.css" >
+  <link rel="stylesheet" type="text/css" href="./css/all.min.css">
   <title>Document</title>
   <style>
     body {
@@ -20,8 +20,63 @@
     }
 
     #top {
+      display: grid;
+      grid-template-columns: 40px 160px 1fr 80px 1fr auto;
       height: 60px;
       background: #000;
+    }
+
+    i {
+      color: white;
+      font-size: 20px;
+    }
+
+    #top>i {
+      margin: 0 15px;
+      font-size: 15px;
+      line-height: 60px;
+      vertical-align: middle;
+    }
+
+    #top img {
+      height: 60px;
+      vertical-align: middle;
+    }
+
+    #center {
+      grid-column-start: 4;
+      margin: 0 10%;
+      vertical-align: middle;
+    }
+
+    #top .right {
+      grid-column-start: 6;
+    }
+
+    table {
+      font-size: 0;
+      background-color: aquamarine;
+    }
+
+    table i {
+      height: 30px;
+    }
+
+    table td {
+      height: 60px;
+      box-sizing: border-box;
+    }
+
+
+
+    input[type="text"] {
+      background: #000;
+      font-weight: bold;
+      color: white;
+    }
+
+    .float-r {
+      float: right;
     }
 
     #left {
@@ -34,12 +89,35 @@
 
 <body>
   <div id="main">
+
     <div id="top">
 
+      <i class="fa-solid fa-bars white i1"></i>
+      <img src="images/icon.jpg" alt="icon">
+      <div id="center">
+        <table class="search">
+          <tr>
+            <td><input type="text" placeholder="搜尋"></td>
+            <td> <i class="fa-solid fa-magnifying-glass"></i></td>
+            <td> <i class="fa-solid fa-microphone"></i></td>
+          </tr>
+        </table>
+      </div>
 
+      <div class="right">
+        <i class="fa-solid fa-video float-r"></i>
+        <i class="fa-solid fa-table-cells float-r"></i>
+        <i class="fa-solid fa-bell float-r"></i>
+        <img src="images/fireball.jpg" class=" float-r" alt="頭貼">
+      </div>
     </div>
+
     <div id="left">
-      <i class="fa-regular fa-bars"></i>
+      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-compass"></i>
+      <i class="fa-solid fa-book-open"></i>
+      <i class="fa-solid fa-clapperboard"></i>
+      <i class="fa-solid fa-images"></i>
     </div>
     <div id="menu"></div>
 
